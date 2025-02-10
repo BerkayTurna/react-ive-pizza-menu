@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client"
-
+import './index.css';
 const pizzaData = [
     {
         name: "Focaccia",
@@ -47,7 +47,7 @@ const pizzaData = [
 ];
 
 function App() {
-    return <div>
+    return <div className="container">
         <Header />
         <Menu />
         <Footer />
@@ -55,31 +55,38 @@ function App() {
 }
 
 function Header() {
-    return <h1>React-ive Pizza Co.</h1>
+    return <header className="header">
+        <h1>React-ive Pizza Co.</h1>
+    </header>
 }
 
 function Menu() {
-    return <div>
+    const pizzas = pizzaData
+    return <main className="menu">
         <h2>Our Pizzas</h2>
-        <Pizza />
-        <Pizza />
-        <Pizza />
-    </div>
+        {pizzas.length > 0 ? <ul className="pizzas">
+            {pizzas.map(pizza => <Pizza pizzaObj={pizza} key={pizza.name} />)}
+        </ul> : <p>We are still working on the menu :)</p>}
+    </main>
+}
+
+function Pizza(props) {
+    return <li className="pizza">
+        <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name} />
+        <div>
+            <h3>{props.pizzaObj.name}</h3>
+            <p>{props.pizzaObj.ingredients}</p>
+            <span>{props.pizzaObj.price}</span>
+        </div>
+    </li>
 }
 
 function Footer() {
-    return <footer>
+    return <footer className="footer">
         {new Date().toLocaleTimeString()} We're currently open!
     </footer>
 }
 
-function Pizza() {
-    return <div>
-        <img src="pizzas/spinaci.jpg" alt="Pizza spinaci" />
-        <h2>Pizza Spinaci</h2>
-        <p>Tomato, mozarella, spinach, and ricotta cheese</p>
-    </div>
-}
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
