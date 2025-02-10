@@ -64,22 +64,28 @@ function Menu() {
     const pizzas = pizzaData
     return <main className="menu">
         <h2>Our Pizzas</h2>
-        {pizzas.length > 0 ? <ul className="pizzas">
-            {pizzas.map(pizza => <Pizza pizzaObj={pizza} key={pizza.name} />)}
-        </ul> : <p>We are still working on the menu :)</p>}
+        {pizzas.length > 0 ? (
+            <>
+                <p>
+                    Authentic Italian cuisine, made with love and passion.
+                    Our pizzas are made with the finest ingredients, and baked in a traditional wood-fired oven.
+                </p>
+                <ul className="pizzas">
+                    {pizzas.map(pizza => <Pizza pizzaObj={pizza} key={pizza.name} />)}
+                </ul>
+            </>
+        ) : (<p>We are still working on the menu :)</p>)}
     </main>
 }
 
 function Pizza(props) {
 
-    if (props.pizzaObj.soldOut) return null;
-
-    return <li className="pizza">
+    return <li className={`pizza ${props.pizzaObj.soldOut ? "sold-out" : ""}`}>
         <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name} />
         <div>
             <h3>{props.pizzaObj.name}</h3>
             <p>{props.pizzaObj.ingredients}</p>
-            <span>{props.pizzaObj.price}</span>
+            <span>{props.pizzaObj.soldOut ? 'SOLD OUT' : props.pizzaObj.price}</span>
         </div>
     </li>
 }
