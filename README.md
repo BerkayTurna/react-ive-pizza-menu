@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+React-ive Pizza Menu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to React-ive Pizza Menu, a simple and interactive pizza menu web app built with React. This app showcases a list of pizzas with their ingredients, prices, and availability, allowing users to explore various pizza options from a virtual menu.
 
-## Available Scripts
+Features
+	•	Pizza Menu: Displays a list of pizzas with images, ingredients, and prices.
+	•	Sold Out Indicator: Marks items as “Sold Out” if they are unavailable.
+	•	Opening Hours: Displays the operating hours and allows users to order when the app is open.
+	•	Responsive Design: The app is designed to be responsive, adjusting to different screen sizes.
 
-In the project directory, you can run:
+Technologies Used
+	•	React: A JavaScript library for building user interfaces.
+	•	ReactDOM: For rendering React components into the DOM.
+	•	CSS: For styling the app.
 
-### `npm start`
+Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To get started with this app, follow the steps below:
+	1.	Clone the repository to your local machine:
+git clone https://github.com/BerkayTurna/react-ive-pizza-menu.git
+ 	2.	Navigate to the project directory:
+cd react-ive-pizza-menu
+  3.	Install dependencies:
+npm install
+	4.	Run the app:
+npm start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The app will open in your browser at http://localhost:3000.
 
-### `npm test`
+How It Works
+	•	The app displays a list of pizzas, which includes the name, ingredients, price, and availability (sold out or not).
+	•	A header section with the title “React-ive Pizza Co.” is shown at the top.
+	•	The main section features a list of pizzas and provides detailed information about each pizza.
+	•	The footer displays the business hours and a call to action for ordering, depending on whether the restaurant is open or closed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+File Structure
 
-### `npm run build`
+The main files in this project are:
+/src
+  /index.css           - Main styling for the app.
+  /index.js            - Entry point for the React app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Main Components
+	•	App: The root component of the application.
+	•	Header: Contains the app’s title.
+	•	Menu: Displays the list of pizzas and their details.
+	•	Pizza: Represents each pizza in the menu with a photo, name, ingredients, price, and availability.
+	•	Footer: Displays the hours of operation and the option to order.
+	•	Order: Displays a message when the restaurant is open and provides an order button.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Contributing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you want to contribute to this project, feel free to fork the repository and submit a pull request. You can also open an issue if you encounter any bugs or have feature requests.
